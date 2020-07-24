@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>autotest-framework</groupId>
+    <artifactId>autotest-framework</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <cucumber.version>6.1.1</cucumber.version>
+        <junit.version>4.13</junit.version>
+        <log4j.version>2.13.3</log4j.version>
+        <allure.version>2.13.2</allure.version>
+        <restAssured.version>4.3.1</restAssured.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+<!--        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+<!--        <cucumber.report.json.location>${project.build.directory}/cucumber-report</cucumber.report.json.location>-->
+<!--        <generated.report.location>${project.build.directory}/cluecumber-report</generated.report.location>-->
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>5.12.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.monochromata.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>4.0.65</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restAssured.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+<!--            <plugin>-->
+<!--                <groupId>com.trivago.rta</groupId>-->
+<!--                <artifactId>cluecumber-report-plugin</artifactId>-->
+<!--                <version>2.5.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>report</id>-->
+<!--                        <phase>post-integration-test</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>reporting</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; The only two mandatory properties &ndash;&gt;-->
+<!--                    <sourceJsonReportDirectory>${cucumber.report.json.location}/cucumber.json-->
+<!--                    </sourceJsonReportDirectory>-->
+<!--                    <generatedHtmlReportDirectory>${generated.report.location}</generatedHtmlReportDirectory>-->
+
+<!--                    &lt;!&ndash; Optional custom parameters that are shown on the start page (if they have a value) &ndash;&gt;-->
+<!--                    &lt;!&ndash; If a key starts with an underscore ("_"), only the value is displayed. &ndash;&gt;-->
+<!--                    <customParameters>-->
+<!--                        <Custom_Parameter>This is a test</Custom_Parameter>-->
+<!--                        <Custom_URL>http://www.google.com</Custom_URL>-->
+<!--                        <_KeysStartingWithAnUnderscoreAreHidden>This is a long text that is displayed without the key.-->
+<!--                            This can be used to display longer texts in the report!-->
+<!--                        </_KeysStartingWithAnUnderscoreAreHidden>-->
+<!--                    </customParameters>-->
+
+<!--                    &lt;!&ndash; Optional report page title &ndash;&gt;-->
+<!--                    <customPageTitle>My Report</customPageTitle>-->
+
+<!--                    &lt;!&ndash; Optional custom colors for passed, failed and skipped &ndash;&gt;-->
+<!--                    &lt;!&ndash; <customStatusColorPassed>#017FAF</customStatusColorPassed> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <customStatusColorFailed>#C94A38</customStatusColorFailed> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <customStatusColorSkipped>#F48F00</customStatusColorSkipped> &ndash;&gt;-->
+
+<!--                    &lt;!&ndash; Optional start page: ALL_SCENARIOS (default), SCENARIO_SEQUENCE, ALL_TAGS, ALL_STEPS, ALL_FEATURES &ndash;&gt;-->
+<!--                    &lt;!&ndash; <startPage>ALL_FEATURES</startPage>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash; Optional custom parameters file &ndash;&gt;-->
+<!--                    &lt;!&ndash;<customParametersFile>custom/custom.properties</customParametersFile>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash; Optional: mark scenarios as failed that contain pending or undefined steps (default: false) &ndash;&gt;-->
+<!--                    &lt;!&ndash;<failScenariosOnPendingOrUndefinedSteps>true</failScenariosOnPendingOrUndefinedSteps>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash; Optional custom CSS for custom styling &ndash;&gt;-->
+<!--                    &lt;!&ndash; <customCss>custom/custom.css</customCss> &ndash;&gt;-->
+
+<!--                    &lt;!&ndash; Optional properties to expand scenario hooks, step hooks and doc strings when scenario details are shown (default: false) &ndash;&gt;-->
+<!--                    <expandBeforeAfterHooks>true</expandBeforeAfterHooks>-->
+<!--                    &lt;!&ndash;<expandStepHooks>true</expandStepHooks>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<expandDocStrings>true</expandDocStrings>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash; optional: Cluecumber log level &ndash;&gt;-->
+<!--                    &lt;!&ndash;<logLevel>default</logLevel>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<logLevel>compact</logLevel>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<logLevel>minimal</logLevel>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<logLevel>off</logLevel>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash; Optionally skip the whole report generation &ndash;&gt;-->
+<!--                    &lt;!&ndash;<skip>true</skip>&ndash;&gt;-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>./target/allure-results</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
