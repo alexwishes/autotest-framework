@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
         },
         glue = {"classpath:stepdefs"},
         features = {"classpath:features"},
-        tags = "@chn_api_demo"
+        tags = ""
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests {
 
