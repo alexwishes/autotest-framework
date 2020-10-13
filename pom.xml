@@ -11,7 +11,7 @@
 
     <properties>
         <cucumber.version>6.1.1</cucumber.version>
-        <junit.version>4.13</junit.version>
+        <junit.version>4.13.1</junit.version>
         <log4j.version>2.13.3</log4j.version>
         <allure.version>2.13.2</allure.version>
         <restAssured.version>4.3.1</restAssured.version>
